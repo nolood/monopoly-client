@@ -1,9 +1,9 @@
-import BoardCard from '@/entities/board-card/ui/board-card.tsx';
+import { Board } from '@/widgets/board/ui';
 
 const HomePage = () => {
   return (
     <div>
-      <BoardCard />
+      <Board />
     </div>
   );
 };

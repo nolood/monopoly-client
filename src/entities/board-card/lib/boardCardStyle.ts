@@ -1,4 +1,5 @@
 export const cardVariant = (variant: 'vertical' | 'horizontal' | 'angle') => {
+  console.log('klek');
   if (variant === 'vertical') {
     return 'bg-slate-700 text-white w-52 py-16 flex flex-col gap-10 justify-center items-center';
   }
