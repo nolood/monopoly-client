@@ -4,20 +4,20 @@ const BoardCard = ({
   price,
   group,
 }: {
-  variant: 'vertical' | 'horizontal' | 'angle';
+  variant: string;
   title: string;
   price?: number;
   group?: string;
 }) => {
-  const cardVariant = (variant: 'vertical' | 'horizontal' | 'angle') => {
+  const cardVariant = (variant: string) => {
     if (variant === 'vertical') {
-      return 'bg-slate-700 text-white min-w-[100px] py-16 flex flex-col gap-10 justify-center items-center';
+      return 'bg-slate-700 text-white min-w-[50px] flex flex-1 flex-col gap-10 items-center';
     }
     if (variant === 'horizontal') {
-      return 'bg-slate-700 text-white min-w-[200px] py-12 flex gap-6 justify-center items-center';
+      return 'bg-slate-700 text-white py-6 flex gap-1 text-xs justify-center items-center';
     }
     if (variant === 'angle') {
-      return 'bg-slate-700 text-white min-w-[300px] h-[300px] flex justify-center items-center';
+      return 'bg-slate-700 text-white min-w-[100px] h-[100px] flex flex-col justify-center items-center';
     }
   };
 
@@ -25,7 +25,6 @@ const BoardCard = ({
     <div className={cardVariant(variant) + ' border border-solid border-slate-900'}>
       <p>{price}</p>
       <p>{title}</p>
-      <p>{group}</p>
     </div>
   );
 };

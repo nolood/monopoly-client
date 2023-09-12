@@ -2,7 +2,7 @@ import { Board } from '@/widgets/board/ui';
 
 const HomePage = () => {
   return (
-    <div>
+    <div className='w-screen h-screen p-10'>
       <Board />
     </div>
   );
