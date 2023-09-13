@@ -104,10 +104,10 @@ export const leftBoard = [
 ];
 
 export const rightBoard = [
-  { id: 12, title: 'Ikea', price: 140000, group: 'sweden', variant: 'horizontal' },
-  { id: 13, title: 'Volvo', price: 140000, group: 'sweden', variant: 'horizontal' },
-  { id: 14, title: 'Gorgo armani', price: 1400, group: 'italy', variant: 'horizontal' },
-  { id: 15, title: 'Налог', price: 150000, group: 'tax', variant: 'horizontal' },
-  { id: 16, title: 'Versage', price: 150000, group: 'italy', variant: 'horizontal' },
-  { id: 17, title: 'Ferrari', price: 150000, group: 'italy', variant: 'horizontal' },
+  { id: 13, title: 'Ikea', price: 140000, group: 'sweden', variant: 'horizontal' },
+  { id: 14, title: 'Volvo', price: 140000, group: 'sweden', variant: 'horizontal' },
+  { id: 15, title: 'Gorgo armani', price: 1400, group: 'italy', variant: 'horizontal' },
+  { id: 16, title: 'Налог', price: 150000, group: 'tax', variant: 'horizontal' },
+  { id: 17, title: 'Versage', price: 150000, group: 'italy', variant: 'horizontal' },
+  { id: 18, title: 'Ferrari', price: 150000, group: 'italy', variant: 'horizontal' },
 ];
