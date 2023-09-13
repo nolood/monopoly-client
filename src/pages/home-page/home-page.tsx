@@ -1,13 +1,14 @@
+import { ChipContainer } from '@/entities/chip/ui';
 import { Board } from '@/widgets/board/ui';
-import { Chip } from '@/entities/chip/ui';
 
 const HomePage = () => {
   return (
     <div className='w-screen h-screen p-10'>
-      <Chip />
-      <Board>
-        <div>chat</div>
-      </Board>
+      <ChipContainer chips={[{ id: 1 }]}>
+        <Board>
+          <div>Chat</div>
+        </Board>
+      </ChipContainer>
     </div>
   );
 };

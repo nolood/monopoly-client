@@ -1,10 +1,12 @@
+import { AnimationControls, motion } from 'framer-motion';
 import styles from './chip.module.css';
-const Chip = () => {
+import { forwardRef } from 'react';
+const Chip = forwardRef<HTMLDivElement, { anim: AnimationControls }>(({ anim }, ref) => {
   return (
-    <div className={styles.chip}>
+    <motion.div animate={anim} ref={ref} className={styles.chip}>
       <div></div>
-    </div>
+    </motion.div>
   );
-};
+});
 
 export default Chip;
