@@ -15,24 +15,33 @@ const ChipContainer = ({
   const containerRef = useRef<HTMLDivElement>(null);
   const boardSize = useStore($boardSize);
 
-  console.log(boardSize);
-
   const anim = useAnimation();
 
+  const onCompleteAnim = () => {
+    if (boardSize.verticalSize.width && ref.current) {
+      anim.set({
+        translateX: 0,
+        x: ref.current?.getBoundingClientRect().left - ref.current?.getBoundingClientRect().width,
+      });
+    }
+  };
+
   const handleAnimate = () => {
-    anim.start({
-      translateX: 820,
-      transition: {
-        duration: 1,
-        type: 'tween',
-      },
-    });
+    if (boardSize.verticalSize.width) {
+      anim.start({
+        translateX: boardSize.verticalSize.width * 2,
+        transition: {
+          duration: 1,
+          type: 'tween',
+        },
+      });
+    }
   };
 
   return (
-    <div className='w-full h-full' ref={containerRef}>
+    <div className='w-full h-full relative' ref={containerRef}>
       {chips.map(({ id }) => (
-        <Chip anim={anim} ref={ref} key={id} />
+        <Chip anim={anim} onCompleteAnim={onCompleteAnim} ref={ref} key={id} />
       ))}
       {children}
       <button
