@@ -1,0 +1,21 @@
+.chip {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50px;
+    height: 50px;
+    border-radius: 100%;
+    -webkit-box-shadow: 0px 33px 44px 0px rgba(0, 0, 0, 0.46) inset;
+    -moz-box-shadow: 0px 33px 44px 0px rgba(0, 0, 0, 0.46) inset;
+    box-shadow: 0px 33px 44px 0px rgba(0, 0, 0, 0.46) inset;
+    background-color: cornflowerblue;
+}
+
+.chip div {
+    width: 50%;
+    height: 50%;
+    border-radius: 100%;
+    -webkit-box-shadow: 0px 33px 44px -20px rgba(0, 0, 0, 0.28) inset;
+    -moz-box-shadow: 0px 33px 44px -20px rgba(0, 0, 0, 0.28) inset;
+    box-shadow: 0px 33px 44px -20px rgba(0, 0, 0, 0.28) inset;
+}
