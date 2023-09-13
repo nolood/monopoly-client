@@ -1,0 +1,14 @@
+@import '@/app/styles/_variables.css';
+
+.upper {
+    display: inline-grid;
+    grid-template-columns: var(--board-card-w) 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr var(--board-card-w);
+    height: var(--board-card-w);
+}
+
+.bottom {
+    display: inline-grid;
+    grid-template-columns: var(--board-card-w) 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr var(--board-card-w);
+    height: var(--board-card-w);
+    width: 100%;
+}

@@ -64,21 +64,22 @@
 
 export const upperBoard = [
   { id: 0, title: 'Start', group: 'angle', variant: 'angle' },
-  { id: 1, title: 'Rolex', price: 2000, group: 'britany', variant: 'vertical' },
+  { id: 1, title: 'Rolls Royce', price: 2000, group: 'britany', variant: 'vertical' },
   { id: 2, title: 'McDonalds', price: 2000, group: 'america', variant: 'vertical' },
-  { id: 3, title: 'BBC', price: 2000, group: 'britany', variant: 'vertical' },
-  { id: 4, title: 'Форс-мажор', group: 'force-major', variant: 'vertical' },
-  { id: 5, title: 'Samsung', price: 150000, group: 'korea', variant: 'vertical' },
-  { id: 6, title: 'Шанс', group: 'chance', variant: 'vertical' },
-  { id: 7, title: 'Danone', price: 6000, group: 'france', variant: 'vertical' },
-  { id: 8, title: 'Hennessy', price: 6000, group: 'france', variant: 'vertical' },
-  { id: 9, title: 'Walt disney', price: 200000, group: 'america', variant: 'vertical' },
-  { id: 10, title: 'Loreal', price: 120000, group: 'france', variant: 'vertical' },
-  { id: 11, title: 'Тюрьма', group: 'angle', variant: 'angle' },
+  { id: 3, title: 'Bp', price: 2000, group: 'britany', variant: 'vertical' },
+  { id: 4, title: 'BBC', price: 2000, group: 'britany', variant: 'vertical' },
+  { id: 5, title: 'Форс-мажор', group: 'force-major', variant: 'vertical' },
+  { id: 6, title: 'Samsung', price: 150000, group: 'korea', variant: 'vertical' },
+  { id: 7, title: 'Шанс', group: 'chance', variant: 'vertical' },
+  { id: 8, title: 'Danone', price: 6000, group: 'france', variant: 'vertical' },
+  { id: 9, title: 'Hennessy', price: 6000, group: 'france', variant: 'vertical' },
+  { id: 10, title: 'Walt disney', price: 200000, group: 'america', variant: 'vertical' },
+  { id: 11, title: 'Loreal', price: 120000, group: 'france', variant: 'vertical' },
+  { id: 12, title: 'Тюрьма', group: 'angle', variant: 'angle' },
 ];
 
 export const bottomBoard = [
-  { id: 18, title: 'Казик', group: 'angle', variant: 'vertical' },
+  { id: 18, title: 'Казик', group: 'angle', variant: 'angle' },
   { id: 19, title: 'Sony', price: 220000, group: 'japan', variant: 'vertical' },
   { id: 20, title: 'Cola', price: 200000, group: 'america', variant: 'vertical' },
   { id: 21, title: 'Canon', price: 18000, group: 'japan', variant: 'vertical' },
@@ -90,8 +91,8 @@ export const bottomBoard = [
   { id: 27, title: 'Adidas', price: 22000, group: 'germany', variant: 'vertical' },
   { id: 28, title: 'Ford', price: 200000, group: 'america', variant: 'vertical' },
   { id: 29, title: 'Mercedes-benz', price: 24000, group: 'germany', variant: 'vertical' },
-  { id: 30, title: 'В тюрьму', group: 'angle', variant: 'horizontal' },
-];
+  { id: 30, title: 'В тюрьму', group: 'angle', variant: 'angle' },
+].reverse();
 
 export const leftBoard = [
   { id: 31, title: 'Nestle', price: 28000, group: 'Switzerland', variant: 'horizontal' },
