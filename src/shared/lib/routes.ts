@@ -1,5 +1,5 @@
 import { HOME_ROUTE } from '@/shared/lib/paths.ts';
-import HomePage from '@/pages/home-page/home-page.tsx';
+import { HomePage } from '@/pages';
 import { JSX } from 'react';
 
 type RouteType = {

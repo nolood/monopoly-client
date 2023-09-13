@@ -1,6 +1,8 @@
 import { ReactNode, useRef } from 'react';
 import { Chip } from '@/entities/chip/ui';
 import { useAnimation } from 'framer-motion';
+import { useStore } from 'effector-react';
+import { $boardSize } from '@/shared/store/model';
 
 const ChipContainer = ({
   children,
@@ -11,6 +13,9 @@ const ChipContainer = ({
 }) => {
   const ref = useRef<HTMLDivElement | null>(null);
   const containerRef = useRef<HTMLDivElement>(null);
+  const boardSize = useStore($boardSize);
+
+  console.log(boardSize);
 
   const anim = useAnimation();
 
