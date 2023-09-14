@@ -1,31 +1,25 @@
-type BoardData = {
-  id: number;
-  title: string;
-  group: string;
-  price?: number;
-  variant: 'vertical' | 'horizontal' | 'angle';
-};
+import { Cell } from '@/features/monopoly-cell/model';
 
-export const refactorBoardData = (data: BoardData[]) => {
-  const upper: BoardData[] = [];
-  const right: BoardData[] = [];
-  const bottom: BoardData[] = [];
-  const left: BoardData[] = [];
+export const refactorBoardData = (data: Cell[]) => {
+  const upper: Cell[] = [];
+  const right: Cell[] = [];
+  const bottom: Cell[] = [];
+  const left: Cell[] = [];
 
-  data.forEach((item) => {
-    if (item.id <= 11) {
+  data.forEach((item, index) => {
+    if (index <= 12) {
       upper.push(item);
     }
-    if (item.id > 11 && item.id < 18) {
+    if (index > 12 && index <= 18) {
       right.push(item);
     }
-    if (item.id >= 18 && item.id <= 30) {
+    if (index > 18 && index <= 31) {
       bottom.push(item);
     }
-    if (item.id > 30 && item.id <= 36) {
+    if (index > 31 && index <= 37) {
       left.push(item);
     }
   });
 
-  return [upper, right, bottom, left];
+  return { upper, right, bottom, left };
 };

@@ -1,19 +1,19 @@
 import { ChipContainer } from '@/entities/chip/ui';
-import { Board } from '@/widgets/board/ui';
 import { useStore } from 'effector-react';
 import { $boardStore } from '@/shared/store/model/board/boardStore.ts';
 import { createChips } from '@/shared/lib/createChips.ts';
 import { ResizeDetector } from '@/features/window-resize-detector/lib';
+import { MonopolyBoard } from '@/widgets/board/ui';
 
 const HomePage = () => {
   const board = useStore($boardStore);
   return (
-    <div className='w-2/3 h-screen p-10'>
+    <div className=''>
       <ResizeDetector />
       <ChipContainer chips={createChips({ count: board.chipsCount })}>
-        <Board>
+        <MonopolyBoard>
           <div>Chat</div>
-        </Board>
+        </MonopolyBoard>
       </ChipContainer>
     </div>
   );

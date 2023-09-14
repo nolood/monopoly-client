@@ -1,10 +1,10 @@
-import { ReactNode, useRef } from 'react';
+import { ReactNode, useEffect, useRef } from 'react';
 import { Chip } from '@/entities/chip/ui';
 import { useAnimation } from 'framer-motion';
 import { useStore } from 'effector-react';
 import { $boardSize } from '@/shared/store/model';
 import { chipAnimation } from '@/entities/chip/lib';
-import { setChipPosition } from '@/entities/chip/model/chip/chip.ts';
+import { setChipPosition } from '@/entities/chip/model/chipStore/chip.ts';
 
 const ChipContainer = ({
   children,
@@ -23,7 +23,7 @@ const ChipContainer = ({
     if (boardSize.verticalSize.width && ref.current) {
       anim.set({
         translateX: 0,
-        x: ref.current?.getBoundingClientRect().left - ref.current.offsetWidth * 2,
+        x: ref.current?.getBoundingClientRect().left,
       });
     }
     setChipPosition(3);

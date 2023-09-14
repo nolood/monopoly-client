@@ -1,1 +1,1 @@
-export { default as Board } from './board/board.tsx';
+export { default as MonopolyBoard } from './monopoly-board/monopoly-board.tsx';

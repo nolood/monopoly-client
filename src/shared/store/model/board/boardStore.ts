@@ -28,7 +28,7 @@ type BoardSize = {
   };
 };
 
-const size = getComputedStyle(document.documentElement).getPropertyValue('--board-card-w');
+const size = getComputedStyle(document.documentElement).getPropertyValue('--monopoly-board-card-w');
 
 const BoardStoreState: BoardStore = {
   chipsCount: 1,
