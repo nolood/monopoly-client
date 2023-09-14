@@ -8,7 +8,7 @@ import { ResizeDetector } from '@/features/window-resize-detector/lib';
 const HomePage = () => {
   const board = useStore($boardStore);
   return (
-    <div className='w-screen h-screen p-10'>
+    <div className='w-2/3 h-screen p-10'>
       <ResizeDetector />
       <ChipContainer chips={createChips({ count: board.chipsCount })}>
         <Board>

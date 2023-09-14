@@ -3,6 +3,8 @@ import { Chip } from '@/entities/chip/ui';
 import { useAnimation } from 'framer-motion';
 import { useStore } from 'effector-react';
 import { $boardSize } from '@/shared/store/model';
+import { chipAnimation } from '@/entities/chip/lib';
+import { setChipPosition } from '@/entities/chip/model/chip/chip.ts';
 
 const ChipContainer = ({
   children,
@@ -21,21 +23,23 @@ const ChipContainer = ({
     if (boardSize.verticalSize.width && ref.current) {
       anim.set({
         translateX: 0,
-        x: ref.current?.getBoundingClientRect().left - ref.current?.getBoundingClientRect().width,
+        x: ref.current?.getBoundingClientRect().left - ref.current.offsetWidth * 2,
       });
     }
+    setChipPosition(3);
   };
 
   const handleAnimate = () => {
-    if (boardSize.verticalSize.width) {
-      anim.start({
-        translateX: boardSize.verticalSize.width * 2,
-        transition: {
-          duration: 1,
-          type: 'tween',
-        },
-      });
-    }
+    // if (boardSize.verticalSize.width) {
+    //   anim.start({
+    //     translateX: boardSize.verticalSize.width * 2,
+    //     transition: {
+    //       duration: 1,
+    //       type: 'tween',
+    //     },
+    //   });
+    // }
+    chipAnimation({ chipElement: ref.current, cubesResult: 3, animationControls: anim });
   };
 
   return (

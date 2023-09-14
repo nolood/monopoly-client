@@ -1,9 +1,10 @@
 @import '@/app/styles/_variables.css';
 
 .chip {
-    position: sticky;
+    position: absolute;
     top: calc(var(--board-card-w) / 2);
     /*left: calc(var(--board-card-w) / 1.5);*/
+    /*transform: translateX(calc(var(--board-card-w) / 2));*/
     display: flex;
     justify-content: center;
     align-items: center;

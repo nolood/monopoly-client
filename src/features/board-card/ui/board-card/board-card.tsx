@@ -53,10 +53,8 @@ const BoardCard = ({
   }, [isResize]);
 
   return (
-    <div ref={ref} className={`${styles.base} ${styles[variant]}`}>
+    <div ref={ref} className={`${styles.base} ${styles[variant]} ${group + title}`}>
       <p>{price}</p>
-      <p>{title}</p>
-      <p>{group}</p>
     </div>
   );
 };

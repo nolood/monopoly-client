@@ -36,7 +36,7 @@ const Board = ({ children }: { children: ReactNode }) => {
             : boardSize.verticalSize.height,
       });
     });
-    bottomBoard.forEach((item) => {
+    bottomBoard.reverse().forEach((item) => {
       result.push({
         ...item,
         width:

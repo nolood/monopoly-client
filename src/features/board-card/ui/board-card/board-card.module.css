@@ -5,11 +5,12 @@
 }
 
 .vertical {
-    @apply flex flex-col items-center;
+    @apply flex flex-col items-center min-w-[50px];
+
 }
 
 .horizontal {
-    @apply h-[100px] flex text-xs justify-center items-center;
+    @apply h-[50px] flex text-xs justify-center items-center;
     width: var(--board-card-w);
 }
 
