@@ -3,11 +3,11 @@ import { $currentChip } from '@/entities/chip/model/chipStore/chip.ts';
 import { AnimationControls } from 'framer-motion';
 
 export const chipAnimation = async ({
-  chipElement,
+  // chipElement,
   cubesResult,
   animationControls,
 }: {
-  chipElement: HTMLDivElement | null;
+  // chipElement: HTMLDivElement | null;
   cubesResult: number;
   animationControls: AnimationControls;
 }) => {

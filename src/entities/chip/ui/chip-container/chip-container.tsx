@@ -1,4 +1,4 @@
-import { ReactNode, useEffect, useRef } from 'react';
+import { ReactNode, useRef } from 'react';
 import { Chip } from '@/entities/chip/ui';
 import { useAnimation } from 'framer-motion';
 import { useStore } from 'effector-react';
@@ -39,7 +39,7 @@ const ChipContainer = ({
     //     },
     //   });
     // }
-    chipAnimation({ chipElement: ref.current, cubesResult: 3, animationControls: anim });
+    chipAnimation({ cubesResult: 3, animationControls: anim });
   };
 
   return (

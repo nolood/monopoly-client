@@ -37,7 +37,7 @@ export const leftBoard = [
   { id: 35, title: 'Налог', price: 150000, group: 'tax', variant: 'horizontal' },
   { id: 36, title: 'Сбербанк', price: 350000, group: 'russian', variant: 'horizontal' },
   { id: 37, title: 'Газпром', price: 400000, group: 'russian', variant: 'horizontal' },
-];
+].reverse();
 
 export const rightBoard = [
   { id: 13, title: 'Ikea', price: 140000, group: 'sweden', variant: 'horizontal' },
