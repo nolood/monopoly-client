@@ -44,9 +44,9 @@ const ChipContainer = ({
 
   return (
     <div className='w-full h-full relative' ref={containerRef}>
-      {chips.map(({ id }) => (
-        <Chip anim={anim} onCompleteAnim={onCompleteAnim} ref={ref} key={id} />
-      ))}
+      {/*{chips.map(({ id }) => (*/}
+      {/*  <Chip anim={anim} onCompleteAnim={onCompleteAnim} ref={ref} key={id} />*/}
+      {/*))}*/}
       {children}
       <button
         onClick={handleAnimate}

@@ -4,6 +4,9 @@ import { $boardSize, setHorizontalBoardSize, setVerticalBoardSize } from '@/shar
 import { useStore } from 'effector-react';
 import { $resizeStore } from '@/features/window-resize-detector/model';
 import { Cell } from '@/features/monopoly-cell/model';
+import { Chip } from '@/entities/chip/ui';
+import { ChipColors } from '@/entities/chip/model/ChipColors.ts';
+
 const MonopolyCell = ({ item }: { item: Cell }) => {
   const ref = useRef<HTMLDivElement>(null);
   const boardSize = useStore($boardSize);
@@ -50,6 +53,9 @@ const MonopolyCell = ({ item }: { item: Cell }) => {
       onClick={() => console.log(item.x, item.y)}
     >
       <p>{item.title}</p>
+      <div>
+        <Chip color={item.chip?.color || ChipColors.BLUE} />
+      </div>
     </div>
   );
 };
