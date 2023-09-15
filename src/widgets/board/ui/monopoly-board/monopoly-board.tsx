@@ -14,6 +14,11 @@ const MonopolyBoard = ({ children }: { children: ReactNode }) => {
     setBoard(newBoard);
   };
 
+  const updateBoard = () => {
+    const newBoard = board.getCopyBoard();
+    setBoard(newBoard);
+  };
+
   useEffect(() => {
     restart();
   }, []);

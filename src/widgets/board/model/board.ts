@@ -41,4 +41,10 @@ export class Board {
     new Chip(ChipColors.RED, this.cells[0], { id: 0, username: 'egor' }, 0);
     new Chip(ChipColors.BLUE, this.cells[0], { id: 0, username: 'egor' }, 1);
   }
+
+  public getCopyBoard() {
+    const newBoard = new Board();
+    newBoard.cells = this.cells;
+    return newBoard;
+  }
 }

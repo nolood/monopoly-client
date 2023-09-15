@@ -33,4 +33,6 @@ export class Cell {
     this.id = id;
     this.board = board;
   }
+
+  public moveChip() {}
 }
