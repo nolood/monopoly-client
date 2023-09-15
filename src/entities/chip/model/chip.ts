@@ -12,13 +12,12 @@ export class Chip {
   cell: Cell;
   user: IUser;
   id: number;
-  positions: ChipPosition;
 
-  constructor(color: ChipColors, cell: Cell, positions: ChipPosition, user: IUser, id: number) {
+  constructor(color: ChipColors, cell: Cell, user: IUser, id: number) {
     this.color = color;
     this.cell = cell;
-    this.positions = positions;
     this.user = user;
     this.id = id;
+    this.cell.chips = [...this.cell.chips, this];
   }
 }

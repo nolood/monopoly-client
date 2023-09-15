@@ -10,6 +10,7 @@ const MonopolyBoard = ({ children }: { children: ReactNode }) => {
   const restart = () => {
     const newBoard = new Board();
     newBoard.initCells();
+    newBoard.addChips();
     setBoard(newBoard);
   };
 

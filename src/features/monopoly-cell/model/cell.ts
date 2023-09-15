@@ -8,7 +8,7 @@ export class Cell {
   readonly price?: number;
   readonly group: string;
   readonly variant: string;
-  chip: Chip | null;
+  chips: Chip[];
   id: number;
   board: Board;
 
@@ -19,7 +19,7 @@ export class Cell {
     price: number | undefined,
     group: string,
     variant: string,
-    chip: Chip | null,
+    chips: Chip[],
     id: number,
     board: Board,
   ) {
@@ -29,7 +29,7 @@ export class Cell {
     this.price = price;
     this.group = group;
     this.variant = variant;
-    this.chip = chip;
+    this.chips = chips;
     this.id = id;
     this.board = board;
   }

@@ -1,8 +1,7 @@
 @import '@/app/styles/_variables.css';
 
 .chip {
-    position: absolute;
-    top: calc(var(--board-card-w) / 2);
+    position: relative;
 
     /*left: calc(var(--monopoly-board-card-w) / 1.5);*/
     /*transform: translateX(calc(var(--monopoly-board-card-w) / 1.5));*/
