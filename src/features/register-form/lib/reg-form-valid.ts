@@ -7,15 +7,15 @@ export const registerForm = createForm({
   fields: {
     email: {
       init: '',
-      rules: [checkEmail(), required()],
+      rules: [required(), checkEmail()],
     },
     username: {
       init: '',
-      rules: [checkLength(3, 15), required()],
+      rules: [required(), checkLength(3, 15)],
     },
     password: {
       init: '',
-      rules: [checkLength(6, 20), required()],
+      rules: [required(), checkLength(6, 20)],
     },
   },
   validateOn: ['submit'],

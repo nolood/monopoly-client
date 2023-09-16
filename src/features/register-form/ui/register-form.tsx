@@ -1,14 +1,16 @@
-import { Button, FormErrorHandler, Input } from '@/shared/ui';
+import { Button, Input } from '@/shared/ui';
 import { registerForm } from '../lib/reg-form-valid';
 import { useForm } from 'effector-forms';
 import { FormEvent } from 'react';
 
 const RegisterForm = () => {
   const { fields, submit } = useForm(registerForm);
+
   const onSubmit = (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     submit();
   };
+
   return (
     <form onSubmit={onSubmit} className='mt-10 flex gap-5 flex-col'>
       <Input
@@ -18,8 +20,8 @@ const RegisterForm = () => {
         name='email'
         type='text'
         label='Email'
+        error={fields.email?.firstError}
       />
-      <FormErrorHandler error={fields.email.errors} />
       <Input
         value={fields.username.value}
         onChange={(e) => fields.username.onChange(e.target.value)}
@@ -27,8 +29,8 @@ const RegisterForm = () => {
         name='username'
         label='Username'
         type='text'
+        error={fields.username?.firstError}
       />
-      <FormErrorHandler error={() => fields.username.errorText()} />
       <Input
         value={fields.password.value}
         onChange={(e) => fields.password.onChange(e.target.value)}
@@ -36,8 +38,8 @@ const RegisterForm = () => {
         name='password'
         label='Password'
         type='password'
+        error={fields.password?.firstError}
       />
-      <FormErrorHandler error={() => fields.password.errorText()} />
       <Button type='submit'>Register</Button>
     </form>
   );

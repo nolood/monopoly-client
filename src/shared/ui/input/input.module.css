@@ -40,3 +40,10 @@
   @apply text-focusColor;
 }
 
+.errorInput {
+  @apply shadow-outlineError;
+}
+
+.errorLabel {
+  @apply text-error;
+}

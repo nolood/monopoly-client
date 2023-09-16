@@ -1,5 +1,6 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
+  important: true,
   content: ['./src/**/*.{html,js,tsx,jsx,ts}'],
   theme: {
     colors: {
@@ -15,6 +16,7 @@ module.exports = {
       boxShadow: {
         outline: '0px 0px 5px 1px #1d90f5',
         hover: '0px 5px 40px 1px #1d90f5',
+        outlineError: '0px 0px 5px 1px #FF4510',
       },
     },
   },
