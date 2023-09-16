@@ -4,7 +4,7 @@ module.exports = {
   theme: {
     colors: {
       bgInput: '#323644',
-      bgInputFocus: '#3d404b ',
+      bgInputFocus: '#3d404b',
       textMain: '#ffffff',
       focusColor: '#1d90f5',
       bgMain: '#272a37',
