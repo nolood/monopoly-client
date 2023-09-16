@@ -1,5 +1,5 @@
 .root {
-  @apply w-full bg-focusColor text-textMain rounded-3xl p-4 text-xl transition-shadow;
+  @apply w-full bg-focusColor text-textMain rounded-3xl p-4 text-xl transition-shadow !important;
 }
 
 .root:hover {
