@@ -2,6 +2,7 @@ import { HOME_ROUTE, LOGIN_ROUTE, REGISTER_ROUTE } from '@/shared/lib/paths.ts';
 import { HomePage } from '@/pages';
 import { JSX } from 'react';
 import LoginPage from '@/pages/login-page/login-page';
+import RegisterPage from '@/pages/register-page/register-page';
 
 type RouteType = {
   path: string;
@@ -19,6 +20,6 @@ export const publicRoutes: RouteType[] = [
   },
   {
     path: REGISTER_ROUTE,
-    Component: LoginPage,
+    Component: RegisterPage,
   },
 ];
