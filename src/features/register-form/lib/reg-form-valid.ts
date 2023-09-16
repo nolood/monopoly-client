@@ -1,43 +1,21 @@
 import { forward } from 'effector';
 import { createForm } from 'effector-forms';
 import { registerFx } from './reg-form-send';
+import { checkEmail, checkLength, required } from '@/shared/lib/validators';
 
 export const registerForm = createForm({
   fields: {
     email: {
       init: '',
-      rules: [
-        {
-          name: 'email',
-          validator: (value: string) => /\S+@\S+\.\S+/.test(value),
-        },
-      ],
+      rules: [checkEmail(), required()],
     },
     username: {
       init: '',
-      rules: [],
+      rules: [checkLength(3, 15), required()],
     },
     password: {
       init: '',
-      rules: [
-        {
-          name: 'required',
-          validator: (value: string) => Boolean(value),
-        },
-      ],
-    },
-    passwordRepeat: {
-      init: '',
-      rules: [
-        {
-          name: 'required',
-          validator: (value: string) => {
-            console.log(registerForm.fields.password);
-            console.log(value);
-            return true;
-          },
-        },
-      ],
+      rules: [checkLength(6, 20), required()],
     },
   },
   validateOn: ['submit'],

@@ -1,6 +1,6 @@
-export const checkLenght = (min: number, max: number) => {
+export const checkLength = (min: number, max: number) => {
   return {
-    name: 'required',
+    name: 'length',
     validator: (value: string) => {
       if (value.length > min && value.length < max) {
         return true;
