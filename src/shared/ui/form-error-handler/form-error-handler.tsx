@@ -1,9 +1,9 @@
-import { ErrorsList } from "@/shared/lib";
+import { ErrorsList } from '@/shared/lib';
 
-
-
-const FormErrorHandler = ({ error }: { error: string }) => {
-  return <div>{ErrorsList[error]}</div>;
+const FormErrorHandler = ({ errors }: { errors?: Array<{ rule: string }> }) => {
+  console.log(errors);
+  if (!errors?.length) return null;
+  return <div className='text-error'>{ErrorsList[errors[0].rule]}</div>;
 };
 
 export default FormErrorHandler;

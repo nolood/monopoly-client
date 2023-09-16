@@ -9,6 +9,7 @@ module.exports = {
       focusColor: '#1d90f5',
       bgMain: '#272a37',
       textSecondary: '#b3b4b9',
+      error: '#FF4510',
     },
     extend: {
       boxShadow: {
