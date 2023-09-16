@@ -5,8 +5,14 @@ const RegisterForm = () => {
   const { fields, submit } = useForm(registerForm);
   return (
     <form className='mt-10 flex gap-5 flex-col'>
-      <Input value={fields.email.value} placeholder='Email' name='email' type='text' label='Email' />
-      <Input value={fields.email} placeholder='Username' name='username' label='Username' type='text' />
+      <Input
+        value={fields.email.value}
+        placeholder='Email'
+        name='email'
+        type='text'
+        label='Email'
+      />
+      <Input placeholder='Username' name='username' label='Username' type='text' />
       <Input placeholder='***********' name='password' label='Password' type='password' />
       <Input
         placeholder='***********'
