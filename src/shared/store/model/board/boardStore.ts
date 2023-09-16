@@ -1,5 +1,5 @@
 import { createStore } from 'effector';
-import { IUser } from '@/shared/store/model/user/user.ts';
+import { IUser } from '@/shared/store/model/user/userStore';
 
 type BoardStore = {
   players: IUser[];

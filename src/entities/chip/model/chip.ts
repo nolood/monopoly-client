@@ -1,6 +1,6 @@
 import { ChipColors } from '@/entities/chip/model/ChipColors.ts';
 import { Cell } from '@/features/monopoly-cell/model';
-import { IUser } from '@/shared/store/model/user/user.ts';
+import { IUser } from '@/shared/store/model/user/userStore';
 
 export type ChipPosition = {
   x: number;
