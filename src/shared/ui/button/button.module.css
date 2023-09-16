@@ -1,0 +1,7 @@
+.root {
+  @apply w-full bg-focusColor text-textMain rounded-3xl p-4 text-xl transition-shadow;
+}
+
+.root:hover {
+  @apply shadow-hover ;
+}

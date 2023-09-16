@@ -13,6 +13,7 @@ module.exports = {
     extend: {
       boxShadow: {
         outline: '0px 0px 5px 1px #1d90f5',
+        hover: '0px 5px 40px 1px #1d90f5',
       },
     },
   },
