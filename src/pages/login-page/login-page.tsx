@@ -1,9 +1,9 @@
-import { Input } from "@/shared/ui";
+import { Input } from '@/shared/ui';
 
 const LoginPage = () => {
   return (
     <div>
-      <Input />
+      <Input type={'text'} label={'Password'} name={'password'} placeholder={'*************'} />
     </div>
   );
 };
