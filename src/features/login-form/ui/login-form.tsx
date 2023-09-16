@@ -1,16 +1,35 @@
 import { Button, Input } from '@/shared/ui';
-
+import { useForm } from 'effector-forms';
+import { FormEvent } from 'react';
+import { loginForm } from '../lib/reg-form-valid';
 const LoginForm = () => {
+  const { fields, submit } = useForm(loginForm);
+
+  const onSubmit = (e: FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    submit();
+  };
   return (
-    <form className='mt-10 flex gap-5 flex-col'>
+    <form onSubmit={onSubmit} className='mt-10 flex gap-5 flex-col'>
       <Input
-        label={'Email or Username'}
+        value={fields.email.value}
+        onChange={(e) => fields.email.onChange(e.target.value)}
+        label='Email or Username'
         name='email'
         type='text'
         placeholder='Enter your email or username'
+        error={fields.email.firstError}
       />
-      <Input label={'Password'} name='password' type='password' placeholder='**************' />
-      <Button>Login</Button>
+      <Input
+        value={fields.password.value}
+        onChange={(e) => fields.password.onChange(e.target.value)}
+        label='Password'
+        name='password'
+        type='password'
+        placeholder='**************'
+        error={fields.password.firstError}
+      />
+      <Button type='submit'>Login</Button>
     </form>
   );
 };

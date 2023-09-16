@@ -2,6 +2,7 @@ import styles from './input.module.css';
 import { InputHTMLAttributes } from 'react';
 import { FormErrorHandler } from '@/shared/ui';
 import { ValidationError } from 'effector-forms';
+import { easeIn, motion } from 'framer-motion';
 
 const Input = ({
   addonAfter,
@@ -33,7 +34,9 @@ const Input = ({
           />
         </label>
       </div>
-      <FormErrorHandler error={error} />
+      <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }}>
+        <FormErrorHandler error={error} />
+      </motion.div>
     </div>
   );
 };
