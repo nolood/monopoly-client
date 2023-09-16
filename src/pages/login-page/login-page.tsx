@@ -1,9 +1,9 @@
-import { Input } from '@/shared/ui';
+import { LoginScreen } from '@/widgets/login-screen/ui';
 
 const LoginPage = () => {
   return (
-    <div>
-      <Input type={'text'} label={'Password'} name={'password'} placeholder={'*************'} />
+    <div className='w-screen h-screen flex justify-center items-center bg-bgMain'>
+      <LoginScreen />
     </div>
   );
 };

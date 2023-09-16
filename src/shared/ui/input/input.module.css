@@ -3,13 +3,19 @@
 }
 
 .root {
-  @apply  bg-bgInput w-full p-1 rounded-xl outline-none border-none text-textMain;
+  @apply  bg-bgInput w-full py-1 rounded-xl text-lg outline-none border-none text-textMain;
 }
+.label{
+  @apply text-textSecondary text-xs;
 
+}
 .root:focus {
   @apply bg-bgInputFocus;
 }
 
 .wrapper:focus-within {
   @apply bg-bgInputFocus shadow-outline;
+}
+.label:focus-within {
+  @apply text-focusColor
 }

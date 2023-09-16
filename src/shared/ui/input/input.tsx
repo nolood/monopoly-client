@@ -15,8 +15,10 @@ const Input = ({
 }) => {
   return (
     <div className={styles.wrapper}>
-      <label htmlFor={name}>{label}</label>
-      <input id={name} className={styles.root} type={type} placeholder={placeholder} />
+      <label className={styles.label} htmlFor={name}>
+        {label}
+        <input id={name} className={styles.root} type={type} placeholder={placeholder} />
+      </label>
     </div>
   );
 };

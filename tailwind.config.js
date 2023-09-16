@@ -5,7 +5,10 @@ module.exports = {
     colors: {
       bgInput: '#323644',
       bgInputFocus: '#3d404b ',
-      textMain: '#ffffff'
+      textMain: '#ffffff',
+      focusColor: '#1d90f5',
+      bgMain: '#272a37',
+      textSecondary: '#b3b4b9',
     },
     extend: {
       boxShadow: {
