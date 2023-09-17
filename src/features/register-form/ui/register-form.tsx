@@ -2,9 +2,12 @@ import { Button, Input } from '@/shared/ui';
 import { registerForm } from '../lib/registration-valid.ts';
 import { useForm } from 'effector-forms';
 import { FormEvent } from 'react';
+import { useStore } from 'effector-react';
+import { registerFx } from '@/features/register-form/lib';
 
 const RegisterForm = () => {
   const { fields, submit } = useForm(registerForm);
+  const isLoading = useStore(registerFx.pending);
 
   const onSubmit = (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
@@ -40,7 +43,9 @@ const RegisterForm = () => {
         type='password'
         error={fields.password?.firstError}
       />
-      <Button type='submit'>Register</Button>
+      <Button loading={isLoading} type='submit'>
+        Register
+      </Button>
     </form>
   );
 };
