@@ -9,10 +9,6 @@ export const loginForm = createForm({
       init: '',
       rules: [required()],
     },
-    username: {
-      init: '',
-      rules: [required(), checkLength(3, 15)],
-    },
     password: {
       init: '',
       rules: [required(), checkLength(6, 20)],
