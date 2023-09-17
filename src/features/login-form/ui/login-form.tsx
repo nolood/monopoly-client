@@ -11,7 +11,7 @@ const LoginForm = () => {
   };
 
   return (
-    <form onSubmit={onSubmit} className='mt-10 flex gap-1 flex-col'>
+    <form onSubmit={onSubmit} className='mt-10 flex gap-3 flex-col'>
       <Input
         value={fields.email.value}
         onChange={(e) => fields.email.onChange(e.target.value)}
