@@ -1,7 +1,7 @@
 import { Button, Input } from '@/shared/ui';
 import { useForm } from 'effector-forms';
 import { FormEvent } from 'react';
-import { loginForm } from '../lib/reg-form-valid';
+import { loginForm } from '../lib';
 const LoginForm = () => {
   const { fields, submit } = useForm(loginForm);
 
@@ -9,12 +9,13 @@ const LoginForm = () => {
     e.preventDefault();
     submit();
   };
+
   return (
     <form onSubmit={onSubmit} className='mt-10 flex gap-5 flex-col'>
       <Input
         value={fields.email.value}
         onChange={(e) => fields.email.onChange(e.target.value)}
-        label='Email or Username'
+        label='Email or username'
         name='email'
         type='text'
         placeholder='Enter your email or username'

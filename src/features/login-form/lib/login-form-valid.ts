@@ -1,11 +1,13 @@
-import { checkEmail, required, checkLength } from '@/shared/lib/validators';
+import { required, checkLength } from '@/shared/lib/validators';
 import { createForm } from 'effector-forms';
+import { forward } from 'effector';
+import { loginFx } from '@/features/login-form/lib/login-form-send.ts';
 
 export const loginForm = createForm({
   fields: {
     email: {
       init: '',
-      rules: [required(), checkEmail()],
+      rules: [required()],
     },
     username: {
       init: '',
@@ -17,4 +19,9 @@ export const loginForm = createForm({
     },
   },
   validateOn: ['submit'],
+});
+
+forward({
+  from: loginForm.formValidated,
+  to: loginFx,
 });
