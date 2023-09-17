@@ -1,5 +1,5 @@
 import { Button, Input } from '@/shared/ui';
-import { registerForm } from '../lib/reg-form-valid';
+import { registerForm } from '../lib/registration-valid.ts';
 import { useForm } from 'effector-forms';
 import { FormEvent } from 'react';
 
@@ -12,7 +12,7 @@ const RegisterForm = () => {
   };
 
   return (
-    <form onSubmit={onSubmit} className='mt-10 flex gap-5 flex-col'>
+    <form onSubmit={onSubmit} className='mt-10 flex gap-1 flex-col'>
       <Input
         value={fields.email.value}
         onChange={(e) => fields.email.onChange(e.target.value)}

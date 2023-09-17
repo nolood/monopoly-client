@@ -1,2 +1,2 @@
-export { loginFx } from './login-form-send.ts';
-export { loginForm } from './login-form-valid.ts';
+export { loginFx } from './login.ts';
+export { loginForm } from './login-valid.ts';

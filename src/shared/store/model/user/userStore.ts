@@ -1,5 +1,6 @@
 import { createEvent, createStore } from 'effector';
 import { Chip } from '@/entities/chip/model';
+import { registerFx } from '@/features/register-form/lib';
 
 export interface IUser {
   id: number;

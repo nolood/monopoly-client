@@ -1,2 +1,2 @@
-export { registerForm } from './reg-form-valid';
-export { registerFx } from './reg-form-send';
+export { registerForm } from './registration-valid.ts';
+export { registerFx } from './registration.ts';
